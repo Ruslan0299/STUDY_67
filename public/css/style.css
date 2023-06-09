@@ -1,0 +1,143 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  color: white;
+}
+
+
+h1, h2, h3, p, body {
+  margin: 0;
+}
+
+body, html{
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+}
+
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.wrapper .chat{
+  list-style: none;
+  flex: 1;
+}
+.form-msg{
+  display: flex;
+  gap: 10px;
+  height: 50px;
+  padding: 5px;
+  align-items: center;
+}
+
+.form-msg label{
+  font-weight: 600px;
+  font-size: 18px;
+}
+
+.form-msg input{
+  width: 100%;
+  border-radius: 100px;
+  padding-left: 20px;
+  border: none;
+  background-color: #2e2e2e;
+  outline: none;
+  height: 100%;
+}
+
+.btn-msg{
+  height: 100%;
+  background-color: #e1821d;
+  width: 100px;
+  padding: 4px 5px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  box-shadow: 0 0 5px 1px #fff;
+}
+
+.btn-msg:active{
+  box-shadow: inset 0 0 5px 1px #fff;
+}
+
+li{
+  background-color: #2e2e2e;
+  padding: 10px;
+  border-radius: 10px;
+  animation: showMessage 0.3s ease;
+  margin-top: 10px;
+}
+
+li:last-child{
+  margin-bottom: 20px;
+}
+
+@keyframes showMessage {
+  from{
+    opacity: 0;
+    transform: rotateX(90deg);
+  } to {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+.name {
+  color: #ccc;
+}
+
+.login{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(204, 204, 204, 0.3);
+}
+
+.user-name{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  min-width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2e2e2e;
+}
+
+.user-name label{
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.user-name input{
+  margin-bottom: 20px;
+  background-color: #2e2e2e;
+  outline: none;
+  height: 30px;
+}
+.btn-name{
+  height: 100%;
+  background-color: #e1821d;
+  width: 50%;
+  padding: 4px 5px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  box-shadow: 0 0 5px 1px #fff;
+  margin: 0 auto;
+}
+
+.btn-name:active{
+  box-shadow: inset 0 0 5px 1px #fff;
+}
+

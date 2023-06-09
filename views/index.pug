@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    script(src="/socket.io/socket.io.js")
+    script(src="/js/app.js" defer)
+    link(rel='stylesheet', href='/css/style.css')
+    title Real Time Application
+  body
+    .wrapper
+      ul.chat
+        //- li
+          //- p.name Bob
+          p.message Hello Friend
+        //- li
+          p.name Mike
+          p.message Hello!
+      form.form-msg(action='/save-message' method='POST')
+        label(for='message') 
+        input(type='text' name='msg' id='msg' required)
+        button.btn-msg(type='submit') Send
+        button.btn-msg(type="submit") Save 
+    .login
+      .user-name
+        label(for='username') Enter your name:
+        input(type='text' name='username' autocomplete="off" required )
+        button.btn-name(type='button') Enter to chat
+        
+        
